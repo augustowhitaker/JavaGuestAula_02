@@ -12,5 +12,8 @@ public class App {
         double total = carrinho.getTotal();
 
         System.out.println("Total " + total);
+
+        JanelaSupermercado janela = new JanelaSupermercado();
+        janela.mostrarJanela();
     }
 }

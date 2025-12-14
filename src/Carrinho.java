@@ -3,6 +3,8 @@ import java.util.ArrayList;
 public class Carrinho {
 
     private ArrayList<ItemCarrinho> itens;
+    private static final int VALOR_MINIMO_DESCONT0 = 200;
+    private static final double VALOR_PORCENTUAL_DESCONTO = 0.2;
 
     public Carrinho() {
         itens = new ArrayList<ItemCarrinho>();
@@ -28,8 +30,8 @@ public class Carrinho {
     public double getTotalComDesconto() {
         double total = getTotal();
 
-        if (total >= 200) {
-            return total - (total * 0.2);
+        if (total >= VALOR_MINIMO_DESCONT0) {
+            return total - (total * VALOR_PORCENTUAL_DESCONTO);
         }
         return total;
     }
