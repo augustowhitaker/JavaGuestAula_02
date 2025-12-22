@@ -4,7 +4,7 @@ import javax.swing.JLabel;
 
 public class JanelaSupermercado {
     private JFrame janela;
-    private JButton botaoArroz, botaoFeijao;
+    private JButton botaoArroz, botaoFeijao, botaoMacarrao;
     private Carrinho carrinho;
     private JLabel labelValorTotal, labelValorTotalDesconto;
 
@@ -19,6 +19,9 @@ public class JanelaSupermercado {
 
         botaoArroz = new JButton("Adicionar arroz");
         botaoArroz.setBounds(20, 20, 150, 30);
+
+        botaoMacarrao = new JButton("Adicionar Macarrão");
+        botaoMacarrao.setBounds(20, 100, 150, 30);
 
         botaoFeijao = new JButton("Adicionar Feijão");
         botaoFeijao.setBounds(20, 60, 150, 30);
@@ -35,6 +38,7 @@ public class JanelaSupermercado {
         labelValorTotalDesconto = new JLabel("0");
         labelValorTotalDesconto.setBounds(320, 100, 120, 30);
 
+        janela.add(botaoMacarrao);
         janela.add(botaoArroz);
         janela.add(botaoFeijao);
         janela.add(labelValorTotal);
@@ -49,6 +53,13 @@ public class JanelaSupermercado {
     public void criarEventos() {
         Produto arroz = new Produto(1, "Arroz", 40);
         Produto feijao = new Produto(2, "Feijão", 7.60);
+
+        Produto macarrao = new Produto(3, "Macarrão", 5.50);
+
+        botaoMacarrao.addActionListener(e -> {
+            carrinho.adicionarProduto(macarrao, 1);
+            atualizarTotais();
+        });
 
         botaoArroz.addActionListener(e -> {
             carrinho.adicionarProduto(arroz, 1);
