@@ -80,3 +80,14 @@ Total: soma dos preços dos produtos adicionados
 Total com desconto: valor final após aplicação da promoção
 
 Os valores são atualizados automaticamente a cada clique em um botão.
+
+🛍️ Produtos disponíveis
+
+Atualmente, a aplicação possui os seguintes produtos:
+
+Produto Preço (R$)
+Arroz 40,00
+Feijão 7,60
+Macarrão 5,50
+
+Cada clique no botão adiciona 1 unidade do produto ao carrinho.
