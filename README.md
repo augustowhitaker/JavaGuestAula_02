@@ -21,7 +21,7 @@ e aplicar automaticamente um desconto promocional.
 
 1. Clone o repositório
 2. Abra o projeto na sua IDE
-3. Execute a classe principal `JanelaSupermercado`
+3. Execute a classe principal `App.java`
 
 ## Autor
 
